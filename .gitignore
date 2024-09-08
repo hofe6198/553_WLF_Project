@@ -1,0 +1,12 @@
+*.jpg
+*.docx
+Output/
+*.Rhistory
+*.Rproj
+/.Rproj.user/
+*.png
+*.tiff
+*.tif
+*.xlsx
+*.csv
+Raw_Data/
