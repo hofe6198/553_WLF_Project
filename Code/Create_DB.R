@@ -1,10 +1,10 @@
 library(RSQLite)
 library(readr)
 
-# Connect to the SQLite database
+
 db <- dbConnect(SQLite(), dbname = "finalproject-db.sqlite")
 
-# Execute SQL code to drop and create tables
+
 dbExecute(db, "
   DROP TABLE IF EXISTS Site;
   DROP TABLE IF EXISTS FishObs;
@@ -77,5 +77,5 @@ dbWriteTable(db, "FishObs", fish_obs_data, append = TRUE, row.names = FALSE)
 fish_indv_data <- read_csv("FISHINV1.csv")
 dbWriteTable(db, "FishIndv", fish_indv_data, append = TRUE, row.names = FALSE)
 
-# Disconnect when done
+
 dbDisconnect(db)
